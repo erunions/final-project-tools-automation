@@ -1,0 +1,139 @@
+/* - - - - - BASE - - - - - */
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-shadow: none;
+    box-sizing: border-box;
+    vertical-align: baseline;
+    transition: none;
+}
+
+p, a, li, label, input, textarea, div, span, h1, h2, h3, h4, h5, h6, table{
+    font-family: 'Montserrat', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    letter-spacing: 0;
+}
+
+.container{
+    position: relative;
+    width: 80%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.container::after
+{
+    display: table;
+    clear: both;
+    content: "";
+}
+
+/* - - - - - HEADER - - - - - */
+
+header {
+    margin: 0 auto;
+    width: 90%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    color: #222;
+    max-width: 500px;
+    min-width: 500px;
+}
+
+header ul {
+    list-style: none;
+}
+
+header ul li {
+    display: inline;
+    margin-left: 25px;
+}
+
+header ul li:first-child {
+    margin-left: 0;
+}
+
+header ul li a {
+    color: #222;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+header input {
+    font-size: 16px;
+    border: solid #222 2px;
+    border-radius: 4px;
+    padding: 7px;
+    width: 250px;
+    background: url('../img/search-icon.png') no-repeat 7px 7px;
+    background-size: 25px;
+    background-position: 98% 50%;
+    background-color: #dcdcdc;
+}
+
+header i {
+    color: #222;
+    font-size: 32px;
+    margin-left: 25px;
+    cursor: pointer;
+}
+
+header .search {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    max-width: 500px;
+    min-width: 500px;
+}
+
+/* - - - - LANDING PAGE - - - - */
+
+.landing-img {
+    background: url('../img/landing.jpg');
+    background-position: 0% 50%;
+    background-size: cover;
+    height: 100vh;
+}
+
+.overlay {
+    background-color: #2222224e;
+    height: 100vh;
+}
+
+.overlay section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+
+.overlay section .slogan {
+    color: #fff;
+    font-size: 60px;
+}
+
+.overlay .down {
+    animation: up-down 10s infinite;
+    color: #fff;
+    font-size: 25px;
+    display: grid;
+    justify-content: center;
+}
+
+@keyframes up-down {
+    5% {transform: translateY(-2px);}
+    30% {transform:  translateY(5px);}
+    45% {transform: translateY(0);}
+}
