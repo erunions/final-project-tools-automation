@@ -12,7 +12,7 @@ let widthCheck = document.getElementById('sWidth');
 let heightCheck = document.getElementById('sHeight');
 
 downarrow.addEventListener('click', function() {
-    window.scrollBy(0, document.body.scrollHeight)
+    document.querySelector('.best-sellers').scrollIntoView(false);
 })
 
 function getCookie(cookieName) {
