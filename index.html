@@ -20,13 +20,56 @@
 
     <body>
 
-        <dialog id="dialog">
+        <dialog class="dialog" id="first">
             <h2>Cookies</h2>
-            <p>Our website uses cookies to ensure the best user experience possible.</p>
+            <p>
+                Our website uses cookies to ensure the best user experience possible. By clicking 
+                <b>Accept</b>, you agree to the use of cookies for marketing and analytics purposes.
+            </p>
+
             <div>
                 <button id="close">Accept</button>
                 <button id="manage">Manage</button>
             </div>
+        </dialog>
+
+        <dialog class="dialog" id="second">
+            <h2>Manage Cookies</h2>
+            <div>
+                <span>
+                    <p>Browser</p>
+                    <label class="switch">
+                        <input type="checkbox" id="browser" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </span>
+
+                <span>
+                    <p>Operating System</p>
+                    <label class="switch">
+                        <input type="checkbox" id="os" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </span>
+
+                <span>
+                    <p>Screen Width</p>
+                    <label class="switch">
+                        <input type="checkbox" id="sWidth" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </span>
+
+                <span>
+                    <p>Screen Height</p>
+                    <label class="switch">
+                        <input type="checkbox" id="sHeight" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </span>
+            </div>
+
+            <button id="save">Save Preferences</button>
         </dialog>
 
         <div class="landing-img">
@@ -36,7 +79,7 @@
         
                     <ul>
                         <li><a href="#">Shop</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="contact-me.html">Contact Us</a></li>
                         <li><a href="#">Our Company</a></li>
                     </ul>
         
