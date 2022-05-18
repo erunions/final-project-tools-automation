@@ -189,7 +189,7 @@ main {
 .best-sellers {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 85px;
+    padding-bottom: 85px;
 }
 
 .bait {
@@ -241,7 +241,6 @@ main {
 }
 
 /* - - - - Cookie Modal - - - - */
-
 
 dialog {
     margin: auto;
@@ -324,7 +323,6 @@ dialog p b {
     }
 }
 
-/* The switch - the box around the slider */
 .switch {
     position: relative;
     display: inline-block;
@@ -332,14 +330,12 @@ dialog p b {
     height: 24px;
 }
   
-/* Hide default HTML checkbox */
 .switch input {
     opacity: 0;
     width: 0;
     height: 0;
 }
   
-/* The slider */
 .slider {
     position: absolute;
     cursor: pointer;
@@ -402,4 +398,20 @@ dialog#second button {
 dialog#second p {
     line-height: normal;
     margin-bottom: 10px;
+}
+
+/* - - - - Footer - - - - */
+
+footer {
+    background-color: #4485fa;
+    height: 100px;
+    width: 100%;
+}
+
+footer p {
+    text-align: center;
+    color: #a4c3fd;
+    line-height: 100px;
+    font-weight: 600;
+    font-size: 25px;
 }
