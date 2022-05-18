@@ -400,6 +400,49 @@ dialog#second p {
     margin-bottom: 10px;
 }
 
+/* - - - - New Arrivals - - - - */
+
+.new-arrivals-title {
+    margin-bottom: 40px;
+    font-size: 35px;
+}
+
+.new-arrivals {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 85px;
+}
+
+.new-arrivals div {
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.new-arrivals img {
+    height: 400px;
+    width: 400px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: .5s all;
+}
+
+.new-arrivals img:hover {
+    opacity: .5;
+}
+
+.arrival-name {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.arrival-price {
+    text-align: center;
+}
+
 /* - - - - Footer - - - - */
 
 footer {
