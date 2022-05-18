@@ -217,11 +217,11 @@ main {
 
 dialog {
     margin: auto;
-    width: 337px;
-    max-height: 200px;
+    width: 350px;
     border-radius: 6px;
-    text-align: center;
+    padding: 25px;
     box-shadow: 2px 2px 4px rgb(0 0 0 / .1);
+    overflow: hidden;
 }
 
 dialog::backdrop {
@@ -229,14 +229,16 @@ dialog::backdrop {
 }
 
 dialog h2 {
-    line-height: 125px;
     font-size: 26px;
     font-weight: 700;
     letter-spacing: -.4px;
+    margin-bottom: 15px;
 }
 
 dialog[open] {
     animation: appear .7s ease-in-out;
+    display: flex;
+    flex-direction: column;
 }
 
 dialog button {
@@ -245,10 +247,18 @@ dialog button {
     color: #fff;
     font-weight: 600;
     border-radius: 8px;
-    margin-bottom: 25px;
-    width: 125px;
     font-size: 16px;
     cursor: pointer;
+    width: 130px;
+}
+
+dialog button:last-child {
+    margin-left: 25px;
+}
+
+dialog p {
+    font-size: 16px;
+    margin-bottom: 25px;
 }
 
 @keyframes appear {
