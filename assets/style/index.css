@@ -1,5 +1,9 @@
 /* - - - - - BASE - - - - - */
 
+html {
+    scroll-behavior: smooth;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -45,18 +49,18 @@ body {
 /* - - - - - HEADER - - - - - */
 
 header {
-    margin: 0 auto;
-    width: 90%;
     height: 10vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* background: #00000043; */
 }
 
 header h1 {
-    color: #222;
+    color: #4485fa;
     max-width: 500px;
     min-width: 500px;
+    margin-left: 5%;
 }
 
 header ul {
@@ -73,30 +77,45 @@ header ul li:first-child {
 }
 
 header ul li a {
-    color: #222;
+    color: #fff;
     text-decoration: none;
     font-weight: 600;
     cursor: pointer;
     font-size: 18px;
+    transition: color .5s;
+}
+
+header ul li a:hover {
+    color: #4485fa;
 }
 
 header input {
     font-size: 16px;
-    border: solid #222 2px;
+    border: solid #fff 2px;
     border-radius: 4px;
     padding: 7px;
     width: 250px;
     background: url('../img/search-icon.png') no-repeat 7px 7px;
     background-size: 25px;
     background-position: 98% 50%;
-    background-color: #dcdcdc;
+    background-color: #fff;
+    transition: all .5s;
+}
+
+header input:hover, header input:focus {
+    border-color: #4485fa;
 }
 
 header i {
-    color: #222;
-    font-size: 32px;
+    color: #fff;
+    font-size: 25px;
     margin-left: 25px;
     cursor: pointer;
+    transition: all .5s;
+}
+
+header i:hover {
+    color: #4485fa;
 }
 
 header .search {
@@ -105,6 +124,7 @@ header .search {
     justify-content: right;
     max-width: 500px;
     min-width: 500px;
+    margin-right: 5%;
 }
 
 /* - - - - LANDING PAGE - - - - */
@@ -117,7 +137,7 @@ header .search {
 }
 
 .landing-img .overlay {
-    background-color: #2222224e;
+    background-color: #22222273;
     height: 100vh;
 }
 
@@ -139,6 +159,12 @@ header .search {
     font-size: 25px;
     display: grid;
     justify-content: center;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.landing-img .overlay .down:hover {
+    color: #4485fa;
 }
 
 @keyframes up-down {
@@ -171,6 +197,7 @@ main {
     background-size: cover;
     width: calc(50% - 10px);
     height: 550px;
+    border-radius: 8px;
 }
 
 .rods {
@@ -178,6 +205,7 @@ main {
     background-size: cover;
     width: calc(50% - 10px);
     height: 550px;
+    border-radius: 8px;
 }
 
 .best-sellers .overlay {
@@ -188,6 +216,7 @@ main {
     flex-direction: column;
     justify-content: end;
     align-items: baseline;
+    border-radius: 8px;
 }
 
 .best-sellers .overlay p {
@@ -203,4 +232,174 @@ main {
     font-size: 18px;
     font-weight: 600;
     cursor: pointer;
+    transition: all .5s;
+}
+
+.best-sellers .overlay button:hover {
+    background-color: #4485fa;
+    color: #fff;
+}
+
+/* - - - - Cookie Modal - - - - */
+
+
+dialog {
+    margin: auto;
+    width: 375px;
+    border-radius: 6px;
+    padding: 25px;
+    box-shadow: 2px 2px 4px rgb(0 0 0 / .1);
+    overflow: hidden;
+}
+
+dialog::backdrop {
+    background: rgb(0 0 0 / .3);
+}
+
+dialog h2 {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -.4px;
+    margin-bottom: 15px;
+}
+
+dialog[open] {
+    animation: appear .7s ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+
+dialog button {
+    padding: 15px;
+    background-color: #4485fa;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    width: calc(50% - 15px);
+    cursor: pointer;
+    transition: all .5s;
+    border: solid #4485fa 2px;
+}
+
+dialog button#manage {
+    background-color: #fff;
+    color: #4485fa;
+}
+
+dialog button:hover {
+    color: #4485fa;
+    background-color: #fff;
+}
+
+dialog button#manage:hover {
+    color: #fff;
+    background-color: #4485fa;
+}
+
+dialog button:last-child {
+    margin-left: 25px;
+}
+
+dialog p {
+    font-size: 16px;
+    margin-bottom: 25px;
+    line-height: 23px;
+}
+
+dialog p b {
+    color: #4485fa;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+  
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+input:checked + .slider {
+    background-color: #4485fa;
+}
+  
+input:focus + .slider {
+    box-shadow: 0 0 1px #4485fa;
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+  
+/* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
+}
+
+dialog span {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+
+dialog#second button {
+    width: 100%;
+    text-align: center;
+    margin: 15px 0 0;
+}
+
+dialog#second p {
+    line-height: normal;
+    margin-bottom: 10px;
 }
